@@ -3,3 +3,17 @@ body{
     color: #fff;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+
+.container{
+    background : url('../assets/Victoria.jpg') no-repeat center;
+    height: 90vh;
+    background-size: cover;
+}
+
+.rightHeader{
+    position: absolute;
+    font-size: 16pt;
+    right: 10pt;
+    top: 20pt;
+}
