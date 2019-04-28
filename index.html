@@ -41,29 +41,42 @@
               class="hover-shadow cursor"
             />
           </div>
+          <div class="column">
+            <img
+              src="assets/Church.jpg"
+              style="width:100%"
+              onclick="openModal();currentSlide(5)"
+              class="hover-shadow cursor"
+            />
+          </div>
         </div>
 
         <div id="myModal" class="modal">
           <span class="close cursor" onclick="closeModal()">&times;</span>
           <div class="modal-content">
             <div class="mySlides">
-              <div class="numbertext">1 / 4</div>
+              <div class="numbertext">1 / 5</div>
               <img src="assets/Taj.jpg" style="width:100%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">2 / 4</div>
+              <div class="numbertext">2 / 5</div>
               <img src="assets/Victoria.jpg" style="width:100%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">3 / 4</div>
+              <div class="numbertext">3 / 5</div>
               <img src="assets/Ooty.jpg" style="width:100%" />
             </div>
 
             <div class="mySlides">
-              <div class="numbertext">4 / 4</div>
+              <div class="numbertext">4 / 5</div>
               <img src="assets/Sunset.jpg" style="width:100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 5</div>
+              <img src="assets/Church.jpg" style="width:100%" />
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -105,6 +118,15 @@
                 style="width:100%"
                 onclick="currentSlide(4)"
                 alt="Sunset"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="assets/Church.jpg"
+                style="width:100%"
+                onclick="currentSlide(4)"
+                alt="Church"
               />
             </div>
           </div>
