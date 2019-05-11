@@ -165,7 +165,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".photo-gallery-header {\r\n  padding-top: 35px;\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n\r\n.photoClass {\r\n  text-align: center;\r\n  padding: 20px;\r\n  width: 80%;\r\n}\r\n\r\n.fa {\r\n  cursor: pointer;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGhvdG8tZ2FsbGVyeS9waG90by1nYWxsZXJ5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3Bob3RvLWdhbGxlcnkvcGhvdG8tZ2FsbGVyeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnBob3RvLWdhbGxlcnktaGVhZGVyIHtcclxuICBwYWRkaW5nLXRvcDogMzVweDtcclxuICB3aWR0aDogMTAwJTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5waG90b0NsYXNzIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMjBweDtcclxuICB3aWR0aDogODAlO1xyXG59XHJcblxyXG4uZmEge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG4iXX0= */"
+module.exports = ".photo-gallery-header {\r\n  padding-top: 35px;\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n\r\n.photoClass {\r\n  text-align: center;\r\n  padding: 20px;\r\n  width: 80%;\r\n}\r\n\r\n.fa {\r\n  cursor: pointer;\r\n}\r\n\r\n.loader {\r\n    position: absolute;\r\n    top:50%;\r\n    left: 46%;\r\n    width: 100px;\r\n}\r\n\r\n.loader img {\r\n    width: 100px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGhvdG8tZ2FsbGVyeS9waG90by1nYWxsZXJ5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixPQUFPO0lBQ1AsU0FBUztJQUNULFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvcGhvdG8tZ2FsbGVyeS9waG90by1nYWxsZXJ5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucGhvdG8tZ2FsbGVyeS1oZWFkZXIge1xyXG4gIHBhZGRpbmctdG9wOiAzNXB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnBob3RvQ2xhc3Mge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG4gIHdpZHRoOiA4MCU7XHJcbn1cclxuXHJcbi5mYSB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4ubG9hZGVyIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OiA0NiU7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbn1cclxuXHJcbi5sb2FkZXIgaW1nIHtcclxuICAgIHdpZHRoOiAxMDBweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ module.exports = ".photo-gallery-header {\r\n  padding-top: 35px;\r\n  width: 10
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"photo-gallery-header\">\n  <img [src]=\"photoUrl\" class=\"photoClass\">\n  <br/>\n  <i class=\"fa fa-arrow-circle-left\" *ngIf=\"photoIndex>0\" (click)=\"leftClk()\"></i>\n  &nbsp;&nbsp;&nbsp;\n  <i class=\"fa fa-arrow-circle-right\" *ngIf=\"photoIndex < maxCount-1\" (click)=\"rightClk()\"></i>\n  <br/>\n  <br/>\n</div>"
+module.exports = "<div class=\"photo-gallery-header\">\n  <img [src]=\"photoUrl\" class=\"photoClass\" (load)=\"onLoad()\">\n  <br/>\n  <i class=\"fa fa-arrow-circle-left\" *ngIf=\"photoIndex>0\" (click)=\"leftClk()\"></i>\n  &nbsp;&nbsp;&nbsp;\n  <i class=\"fa fa-arrow-circle-right\" *ngIf=\"photoIndex < maxCount-1\" (click)=\"rightClk()\"></i>\n  <br/>\n  <br/>\n</div>\n<div class=\"loader\">\n  <img *ngIf=\"loading\" src=\"/assets/loader.gif\" alt=\"loading\" />\n</div>"
 
 /***/ }),
 
@@ -199,6 +199,7 @@ var PhotoGalleryComponent = /** @class */ (function () {
         this.photoIndex = 0;
         this.photoUrl = '';
         this.maxCount = 0;
+        this.loading = true;
         this.photoUrls = [
             './../../assets/Images/Mountains/Ooty1.jpg',
             './../../assets/Images/Mountains/Ooty2.jpg',
@@ -220,6 +221,9 @@ var PhotoGalleryComponent = /** @class */ (function () {
     PhotoGalleryComponent.prototype.rightClk = function () {
         this.photoIndex = this.photoIndex + 1;
         this.photoUrl = this.photoUrls[this.photoIndex];
+    };
+    PhotoGalleryComponent.prototype.onLoad = function () {
+        this.loading = false;
     };
     PhotoGalleryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
