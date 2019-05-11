@@ -165,7 +165,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".photo-gallery-header {\r\n   padding-top: 25px;\r\n   padding-left: 20px;\r\n   padding-right: 20px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGhvdG8tZ2FsbGVyeS9waG90by1nYWxsZXJ5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7R0FDRyxpQkFBaUI7R0FDakIsa0JBQWtCO0dBQ2xCLG1CQUFtQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3Bob3RvLWdhbGxlcnkvcGhvdG8tZ2FsbGVyeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnBob3RvLWdhbGxlcnktaGVhZGVyIHtcclxuICAgcGFkZGluZy10b3A6IDI1cHg7XHJcbiAgIHBhZGRpbmctbGVmdDogMjBweDtcclxuICAgcGFkZGluZy1yaWdodDogMjBweDtcclxufVxyXG4iXX0= */"
+module.exports = ".photo-gallery-header {\r\n  padding-top: 35px;\r\n  width: 100%;\r\n  text-align: center;\r\n}\r\n\r\n.photoClass {\r\n  text-align: center;\r\n  padding: 20px;\r\n  width: 80%;\r\n}\r\n\r\n.fa {\r\n  cursor: pointer;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGhvdG8tZ2FsbGVyeS9waG90by1nYWxsZXJ5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsV0FBVztFQUNYLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsVUFBVTtBQUNaOztBQUVBO0VBQ0UsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3Bob3RvLWdhbGxlcnkvcGhvdG8tZ2FsbGVyeS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnBob3RvLWdhbGxlcnktaGVhZGVyIHtcclxuICBwYWRkaW5nLXRvcDogMzVweDtcclxuICB3aWR0aDogMTAwJTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5waG90b0NsYXNzIHtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMjBweDtcclxuICB3aWR0aDogODAlO1xyXG59XHJcblxyXG4uZmEge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ module.exports = ".photo-gallery-header {\r\n   padding-top: 25px;\r\n   padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"photo-gallery-header\">\n  Clicks\n</div>"
+module.exports = "<div class=\"photo-gallery-header\">\n  <img [src]=\"photoUrl\" class=\"photoClass\">\n  <br/>\n  <i class=\"fa fa-arrow-circle-left\" *ngIf=\"photoIndex>0\" (click)=\"leftClk()\"></i>\n  &nbsp;&nbsp;&nbsp;\n  <i class=\"fa fa-arrow-circle-right\" *ngIf=\"photoIndex < maxCount-1\" (click)=\"rightClk()\"></i>\n  <br/>\n  <br/>\n</div>"
 
 /***/ }),
 
@@ -196,8 +196,30 @@ __webpack_require__.r(__webpack_exports__);
 
 var PhotoGalleryComponent = /** @class */ (function () {
     function PhotoGalleryComponent() {
+        this.photoIndex = 0;
+        this.photoUrl = '';
+        this.maxCount = 0;
+        this.photoUrls = [
+            './../../assets/Images/Mountains/Ooty1.jpg',
+            './../../assets/Images/Mountains/Ooty2.jpg',
+            './../../assets/Images/Mountains/Ooty3.jpg',
+            './../../assets/Images/Mountains/Ooty4.jpg',
+            './../../assets/Images/Mountains/Ooty5.jpg',
+            './../../assets/Images/Mountains/Ooty6.jpg',
+            './../../assets/Images/Mountains/Kumaon1.jpg',
+        ];
     }
     PhotoGalleryComponent.prototype.ngOnInit = function () {
+        this.photoUrl = this.photoUrls[this.photoIndex];
+        this.maxCount = this.photoUrls.length;
+    };
+    PhotoGalleryComponent.prototype.leftClk = function () {
+        this.photoIndex = this.photoIndex - 1;
+        this.photoUrl = this.photoUrls[this.photoIndex];
+    };
+    PhotoGalleryComponent.prototype.rightClk = function () {
+        this.photoIndex = this.photoIndex + 1;
+        this.photoUrl = this.photoUrls[this.photoIndex];
     };
     PhotoGalleryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
